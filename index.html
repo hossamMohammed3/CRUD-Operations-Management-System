@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Operation</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- start header -->
+        
+        <header>
+
+            <h1> My Project </h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+
+        </header>
+
+        <!-- end header -->
+        
+        <!-- start input -->
+
+        <section class="inputs">
+            <input type="text" placeholder="title" id="title">
+            <div class="price">
+                <input onkeyup="getTotal()" type="number" placeholder="price" id="price">
+                <input onkeyup="getTotal()" type="number" placeholder="taxes" id="taxes">
+                <input onkeyup="getTotal()" type="number" placeholder="ads" id="ads">
+                <input onkeyup="getTotal()" type="number" placeholder="discunt" id="discunt">
+                <small id="total" ></small>
+            </div>
+            <input type="number" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category">
+            <button id="submit">create</button>
+        </section>
+        <section class="outpots">
+            <div class="searchBlock">
+                <input onkeyup="searchDta(this.value)" type="text" placeholder="search" id="search">
+                <div class="btnsearch">
+                    <button onclick="search(id)"  id="searchTitle">search by title</button>
+                    <button onclick="search(id)"  id="searchcategory">search by category</button>
+                </div>
+            </div>
+            <div id="deletAll">
+                <button></button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>title</th>
+                        <th>price</th>
+                        <th>taxces</th>
+                        <th>ads</th>
+                        <th>discount</th>
+                        <th>total</th>
+                        <th>categoty</th>
+                        <th>update</th>
+                        <th>delate</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    
+                </tbody>
+            </table>
+        </section>
+
+        <!-- end input -->
+
+        <!-- start arro hidden -->
+
+        <div class="mode-color">
+            <span id="light">🔆</span>
+            <span style="font-size: 50px; color: rgb(154, 154, 1); margin-left: 15px;" id="dark">☾</span>
+        </div>
+
+        <!-- end arro hidden -->
+         
+
+        <script src="./Main.js" ></script>
+    </div>
+</body>
+</html>
